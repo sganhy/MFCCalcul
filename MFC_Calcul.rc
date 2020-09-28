@@ -58,39 +58,6 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// Icon
-//
-
-// Icon with lowest ID value placed first to ensure application icon
-// remains consistent on all systems.
-IDR_MAINFRAME           ICON                    "res\\MFC_Calcul.ico"
-IDR_AGENDATYPE          ICON                    "res\\MFC_CalculDoc.ico"
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// Accelerator
-//
-
-IDR_MAINFRAME ACCELERATORS
-BEGIN
-    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
-    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
-    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
-    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
-    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
-    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
-    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
-    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
-    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
-    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
-    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
-    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
-    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
-END
-
-
-/////////////////////////////////////////////////////////////////////////////
-//
 // Version
 //
 
@@ -132,10 +99,6 @@ END
 // String Table
 //
 
-STRINGTABLE
-BEGIN
-    IDR_MAINFRAME           ""
-END
 
 STRINGTABLE
 BEGIN
@@ -201,6 +164,16 @@ END
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRB)
 LANGUAGE LANG_FRENCH, SUBLANG_FRENCH_BELGIAN
 #pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\MFC_Calcul.ico"
+IDR_AGENDATYPE          ICON                    "res\\MFC_CalculDoc.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -277,6 +250,30 @@ END
 #endif    // APSTUDIO_INVOKED
 
 #endif    // French (Belgium) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) (unknown sub-lang: 0x8) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ZZZ)
+LANGUAGE LANG_NEUTRAL, 0x8
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_POPUP_MENU MENU
+BEGIN
+    POPUP "POPUP_SUBMIT"
+    BEGIN
+        MENUITEM "Calculer",                    ID_POPUP_CALCULER
+    END
+END
+
+#endif    // Neutral (Default) (unknown sub-lang: 0x8) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

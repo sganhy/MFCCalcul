@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CLogger.cpp" />
     <ClCompile Include="MFC_Calcul.cpp" />
     <ClCompile Include="MFC_CalculDoc.cpp" />
     <ClCompile Include="MFC_CalculView.cpp" />
@@ -143,6 +144,7 @@
     <ResourceCompile Include="MFC_Calcul.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CLogger.h" />
     <ClInclude Include="MFC_Calcul.h" />
     <ClInclude Include="MFC_CalculDoc.h" />
     <ClInclude Include="MFC_CalculView.h" />

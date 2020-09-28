@@ -58,6 +58,7 @@ protected:
 public:
 	afx_msg void OnBnClickedErase();
 	afx_msg void OnAppSum();
+	afx_msg void OnContextMenu(CWnd* /*pWnd*/, CPoint /*point*/);
 };
 
 #ifndef _DEBUG  // debug version in MFC_CalculView.cpp

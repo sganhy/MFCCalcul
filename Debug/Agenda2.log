@@ -1,0 +1,24 @@
+﻿Build started 27/09/2020 23:24:50.
+     1>Project "C:\Temp\MFCCalcul\Agenda2.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating ".\Debug\MFC_Calcul.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       ResourceCompile:
+         All outputs are up-to-date.
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+       Manifest:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       FinalizeBuildStatus:
+         Deleting file ".\Debug\MFC_Calcul.unsuccessfulbuild".
+         Touching ".\Debug\MFC_Calcul.lastbuildstate".
+     1>Done Building Project "C:\Temp\MFCCalcul\Agenda2.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.05

@@ -6,6 +6,7 @@
 #include "locale.h"
 #include <iostream>
 #include <sstream>
+#include "CLogger.h"
 
 #include "MFC_CalculDoc.h"
 #include "MFC_CalculView.h"
@@ -106,6 +107,7 @@ void CMFCalculView::OnBnClickedErase()
 
 void CMFCalculView::OnAppSum()
 {
+	Logging::CLogger log ;
 	UpdateData(TRUE);
 	int op1 = _ttoi(m_op1);
 	int op2 = _ttoi(m_op2);
@@ -113,7 +115,37 @@ void CMFCalculView::OnAppSum()
 
 	// TODO: add exception handler 
 	CString str;
+	CString logMessage ;
 	str.Format("%d", result);	
+	// log 
+	logMessage = m_op1 + " + " + " = " + str;
+	log.Log(Logging::LOG_LEVEL_INFO, logMessage, "calcule.log", "CMFCalculView::OnAppSum()",0);
 	m_result = str;
 	UpdateData(FALSE);
+}
+
+
+void CMFCalculView::OnContextMenu(CWnd* pWnd, CPoint point)
+{
+	// TODO: Add your message handler code here
+	// Load the desired menu
+	CMenu mnuPopupSubmit;
+	mnuPopupSubmit.LoadMenu(IDR_POPUP_MENU);
+
+	// Get a pointer to the button
+	CButton *pButton;
+	pButton = reinterpret_cast<CButton *>(GetDlgItem(ID_POPUP_CALCULER));
+
+	// Find the rectangle around the button
+	CRect rectSubmitButton;
+	pButton->GetWindowRect(&rectSubmitButton);
+
+	// Get a pointer to the first item of the menu
+	CMenu *mnuPopupMenu = mnuPopupSubmit.GetSubMenu(0);
+	ASSERT(mnuPopupMenu);
+	
+	// Find out if the user right-clicked the button
+	// because we are interested only in the button
+	if( rectSubmitButton.PtInRect(point) ) // Since the user right-clicked the button, display the context menu
+		mnuPopupMenu->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y, this);
 }
